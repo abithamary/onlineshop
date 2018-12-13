@@ -1,0 +1,6 @@
+com\niit\testcases\ProductDAOTestCase.class
+com\niit\testcases\CategoryTestCase.class
+com\niit\onlineshoppingbackend\AppTest.class
+com\niit\testcases\TestConfiguration.class
+com\niit\testcases\SupplierDAOTestCase.class
+com\niit\testcases\UserDAOTestCase.class
