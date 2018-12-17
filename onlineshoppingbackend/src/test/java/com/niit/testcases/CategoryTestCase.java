@@ -16,7 +16,7 @@ import com.niit.model.Category;
 
 public class CategoryTestCase {
 
-	/*private static AnnotationConfigApplicationContext context;
+	private static AnnotationConfigApplicationContext context;
 	
 	@Autowired
 	private static CategoryDAO categoryDAO;
@@ -29,39 +29,36 @@ public class CategoryTestCase {
 	public static void init()
 	{
 		context = new AnnotationConfigApplicationContext();
-		//scan the complete package and check for annoations like
-		//@Component, @Controller, @Repository, @Service
+		
 		context.scan("com.niit"); 
-		//clear the context(bean factory, and recreate all the
-		//instances of the classes which are there in com.niit
-		//with proper annotations.
+		
 		context.refresh();
-		//ask the context to get instance of CategoryDAO
+		
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 		category = (Category)context.getBean("category");
 	}
-	//@Ignore
+	@Ignore
 	
 	@Test
 	public void saveCategoryTestCase()
 	{
 		category = new Category();
-		category.setId("Bookes001");
-		category.setName("Book");
-		category.setDescription("This is Book category");
+		category.setId("M006");
+		category.setName("Lap");
+		category.setDescription("This is Dell  category");
 		
 	  boolean status = 	categoryDAO.save(category);
 	  
 	  assertEquals("save category test case", true, status);
 	}
 	
-	@Ignore
+	//@Ignore
 	@Test
 	public void updateCategoryTestCase()
 	{
-		category.setId("Mob-001");
-		category.setName("Mobile");
-		category.setDescription("This is new mobile category");
+		category.setId("M004");
+		category.setName("Camera");
+		category.setDescription("This is  camera category");
 		boolean status = categoryDAO.update(category);
 		assertEquals("update test case", true,status );
 	}
@@ -70,7 +67,7 @@ public class CategoryTestCase {
 	public void getCategorySuccessTestCase()
 	{
 		
-	category= categoryDAO.get("jaskaran1@gmail.com");
+	category= categoryDAO.get("M002");
 	
 	assertNotNull("get category test case", category);
 	}
@@ -79,15 +76,15 @@ public class CategoryTestCase {
 	public void getCategoryFailureTestCase()
 	{
 		
-	category= categoryDAO.get("jaya@gmail.com");
+	category= categoryDAO.get("M002");
 	
 	assertNull("get category test case", category);
 	}
-	@Ignore
+	//@Ignore
 	@Test
 	public void deleteCategorySuccessTestCase()
 	{
-	boolean status =	categoryDAO.delete("jaskaran1@gmail.com");
+	boolean status =	categoryDAO.delete("M002");
 	assertEquals("delete category succss test case" , true, status);
 	
 	}
@@ -95,7 +92,7 @@ public class CategoryTestCase {
 	@Test
 	public void deleteCategoryFailureTestCase()
 	{
-	boolean status =	categoryDAO.delete("arpith@gmail.com");
+	boolean status =	categoryDAO.delete("M002");
 	assertEquals("delete category failure test case" , false, status);
 	
 	}
@@ -106,12 +103,12 @@ public class CategoryTestCase {
 	{
 	List<Category>	categorys = categoryDAO.list();
 	
-	assertEquals("get all usres " , 5, categorys.size() );
+	assertEquals("get all usres " , 2, categorys.size() );
 	
 	}
 	
 	
-	*/	
+		
 	
 	
 	

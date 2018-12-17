@@ -17,7 +17,7 @@ import com.niit.model.Product;
 
 public class ProductDAOTestCase {
 
-	/*private static AnnotationConfigApplicationContext context;
+	private static AnnotationConfigApplicationContext context;
 	
 	@Autowired
 	private static ProductDAO productDAO;
@@ -47,11 +47,12 @@ public class ProductDAOTestCase {
 	public void saveProductTestCase()
 	{
 		product = new Product();
-		product.setId("Lenevo-001");
-		product.setName("Lenevo -- prodcut");
-		product.setDescription("This is Lenevo product");
-		product.setCategoryId("Mob-001");
-		
+		product.setId("Samsung-02");
+		product.setName("S1002Model");
+		product.setDescription("This is Samsung  product");
+		product.setCategoryId("M001");
+		product.setPrice(5000);
+		product.setSupplierId("SUP-002");
 	  boolean status = 	productDAO.save(product);
 	  
 	  assertEquals("save product test case", true, status);
@@ -62,9 +63,9 @@ public class ProductDAOTestCase {
 	@Test
 	public void updateProductTestCase()
 	{
-		product.setId("Lenevo-001");
-		product.setName("Lenevo -- prodcut");
-		product.setDescription("This is Lenevo product");
+		product.setId("Samsung-01");
+		product.setName("S10003Model");
+		product.setDescription("This is Samsung product");
 		boolean status = productDAO.update(product);
 		assertEquals("update test case", true,status );
 	}
@@ -74,7 +75,7 @@ public class ProductDAOTestCase {
 	public void getProductSuccessTestCase()
 	{
 		
-	product= productDAO.get("Lenevo-001");
+	product= productDAO.get("Samsung-01");
 	
 	assertNotNull("get product test case", product);
 	}
@@ -84,7 +85,7 @@ public class ProductDAOTestCase {
 	public void getProductFailureTestCase()
 	{
 		
-	product= productDAO.get("Lenevo-001");
+	product= productDAO.get("Samsung-01");
 	
 	assertNull("get product test case", product);
 	}
@@ -93,7 +94,7 @@ public class ProductDAOTestCase {
 	@Test
 	public void deleteProductSuccessTestCase()
 	{
-	boolean status =	productDAO.delete("Lenevo-001");
+	boolean status =	productDAO.delete("Samsung-01");
 	assertEquals("delete product succss test case" , true, status);
 	
 	}
@@ -102,7 +103,7 @@ public class ProductDAOTestCase {
 	@Test
 	public void deleteProductFailureTestCase()
 	{
-	boolean status =	productDAO.delete("Lenevo-001");
+	boolean status =	productDAO.delete("Samsung-01");
 	assertEquals("delete product failure test case" , false, status);
 	
 	}
@@ -121,7 +122,7 @@ public class ProductDAOTestCase {
 	
 	
 	
-	*/
+	
 	
 	
 	
