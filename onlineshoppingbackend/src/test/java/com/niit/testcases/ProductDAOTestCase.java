@@ -30,29 +30,26 @@ public class ProductDAOTestCase {
 	public static void init()
 	{
 		context = new AnnotationConfigApplicationContext();
-		//scan the complete package and check for annoations like
-		//@Component, @Controller, @Repository, @Service
+		
 		context.scan("com.niit"); 
-		//clear the context(bean factory, and recreate all the
-		//instances of the classes which are there in com.niit
-		//with proper annotations.
+		
 		context.refresh();
-		//ask the context to get instance of ProductDAO
+		
 		productDAO = (ProductDAO)context.getBean("productDAO");
 		product = (Product)context.getBean("product");
 	}
-	@Ignore
+	//@Ignore
 	
 	@Test
 	public void saveProductTestCase()
 	{
 		product = new Product();
-		product.setId("Samsung-02");
-		product.setName("S1002Model");
+		product.setId("Samsung-04");
+		product.setName("S1007 Model");
 		product.setDescription("This is Samsung  product");
-		product.setCategoryId("M001");
-		product.setPrice(5000);
-		product.setSupplierId("SUP-002");
+		product.setCategoryId("M003");
+		product.setPrice(6000);
+		product.setSupplierId("SUP-004");
 	  boolean status = 	productDAO.save(product);
 	  
 	  assertEquals("save product test case", true, status);
@@ -94,7 +91,7 @@ public class ProductDAOTestCase {
 	@Test
 	public void deleteProductSuccessTestCase()
 	{
-	boolean status =	productDAO.delete("Samsung-01");
+	boolean status =	productDAO.delete("Samsung-05");
 	assertEquals("delete product succss test case" , true, status);
 	
 	}

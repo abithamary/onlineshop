@@ -16,7 +16,7 @@ import com.niit.model.User;
 
 public class UserDAOTestCase {
 
-	/*private static AnnotationConfigApplicationContext context;
+	private static AnnotationConfigApplicationContext context;
 	
 	@Autowired
 	private static UserDAO userDAO;
@@ -46,23 +46,23 @@ public class UserDAOTestCase {
 	public void saveUserTestCase()
 	{
 		user = new User();
-		user.setEmailID("kiran@gmail.com");
-		user.setMobile("444444444");
-		user.setName("kiran kumar");
-		user.setPwd("kiran@123");
+		user.setEmailID("sateesh@gmail.com");
+		user.setMobile("Oppo");
+		user.setName("sateesh yadav");
+		user.setPwd("sateesh@123");
 		
 	  boolean status = 	userDAO.save(user);
 	  
 	  assertEquals("save user test case", true, status);
 	}
 	
-	@Ignore
+	//@Ignore
 	
 	@Test
 	public void updateUserTestCase()
 	{
-		user.setEmailID("jaskaran1@gmail.com");
-		user.setMobile("888888888");
+		user.setEmailID("kiran@gmail.com");
+		user.setMobile("Lenovo");
 		boolean status = userDAO.update(user);
 		assertEquals("update test case", true,status );
 	}
@@ -127,7 +127,7 @@ public class UserDAOTestCase {
 	
 	}
 	
-	*/
+	
 	
 	
 	

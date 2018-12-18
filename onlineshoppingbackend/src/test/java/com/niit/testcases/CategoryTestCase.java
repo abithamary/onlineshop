@@ -56,9 +56,9 @@ public class CategoryTestCase {
 	@Test
 	public void updateCategoryTestCase()
 	{
-		category.setId("M004");
-		category.setName("Camera");
-		category.setDescription("This is  camera category");
+		category.setId("M002");
+		category.setName("Lap");
+		category.setDescription("This is Dell  category");
 		boolean status = categoryDAO.update(category);
 		assertEquals("update test case", true,status );
 	}
@@ -80,7 +80,7 @@ public class CategoryTestCase {
 	
 	assertNull("get category test case", category);
 	}
-	//@Ignore
+	@Ignore
 	@Test
 	public void deleteCategorySuccessTestCase()
 	{

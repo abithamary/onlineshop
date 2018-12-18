@@ -36,21 +36,21 @@ public class SupplierDAOTestCase {
 		supplierDAO = (SupplierDAO)context.getBean("supplierDAO");
 		supplier = (Supplier)context.getBean("supplier");
 	}
-	@Ignore
+	//@Ignore
 	@Test
 	public void saveSupplierTestCase()
 	{
 		supplier = new Supplier();
-		supplier.setId("SUP-003");
-		supplier.setName("Sateesh");
-		supplier.setAddress("Kerala");
+		supplier.setId("SUP-005");
+		supplier.setName("Adarsh");
+		supplier.setAddress("Bengal");
 		
 	  boolean status = 	supplierDAO.save(supplier);
 	  
 	  assertEquals("save supplier test case", true, status);
 	}
 	
-	//@Ignore
+	@Ignore
 	
 	@Test
 	public void updateSupplierTestCase()
